@@ -2,10 +2,10 @@
 //LECTURE: Values and Variables
 
 //Declare variables called 'country', 'continent' and 'population' and assign their values according to your own country (population in millions)
-//let country = 'Indonesia'; //string value (''), country is a constant value
-// let continent = 'Asia'; //string value (''), continent is a constant value
+//let country = 'Indonesia'; //string value (''), country is a constant value look at lecture let, const and var for the reason
+// let continent = 'Asia'; //string value (''), continent is a constant value look at lecture let, const and var for the reason
 let population = 200; //integer value because 10 is a number, and population can be changed
-//see LECTURE: let, const and var why some code change to comment
+//look at LECTURE: let, const and var why some code change to comment
 
  //Log their values to the console
  console.log(country); //indonesia
@@ -18,7 +18,7 @@ let population = 200; //integer value because 10 is a number, and population can
 //LECTURE: Data Types
 
 //Declare a variable called 'isIsland' and set its value according to your country. The variable should hold a Boolean value. Also declare a variable 'language', but don't assign it any value yet
-//let isIsland = true; //boolean value, because (true), isIsland is a constant value, see lecture let, const and var
+//let isIsland = true; //boolean value, because (true), isIsland is a constant value, look at lecture let, const and var for the reason
  let language; //just declaration variable will output undefined
 
  //Log the types of 'isIsland', 'population', 'country' and 'language' to the console
@@ -51,5 +51,5 @@ const country = 'Indonesia';
  //continent = 'europe';, this is must be error because continent is a constant value
  //why? because indonesia is in asia not in europe continent.
 
-// end of LECTURE: let, const and var
-////////////////////////////////////////////////
+  // end of LECTURE: let, const and var
+  ////////////////////////////////////////////////
