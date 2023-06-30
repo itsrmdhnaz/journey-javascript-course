@@ -1,4 +1,4 @@
-//#1 challenge
+//CHALLENGE #1
 
 /* Write your code below. Good luck! 🙂 */
 
@@ -22,3 +22,19 @@ console.log(BMIMark, BMIJhon);
 const markHigherBmi = BMIMark > BMIJhon; //for checking is that bmi mark is higher than bmi mark?
 
 console.log(markHigherBmi);
+
+/* Write your code below. Good luck! 🙂 */
+
+// Print a nice output to the console, telling the user who has the higher BMI. The message can be either:
+
+// "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!".
+
+// 2. Modify the outputs above to use template literals to include the BMI values in the outputs.
+
+// Example: "Mark's BMI (28.3) is higher than John's (23.9)!" or "John's BMI (29.1) is higher than Mark's (27)!".
+
+if(BMIMark > BMIJohn) {
+    console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
+} else {
+    console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`);
+}
