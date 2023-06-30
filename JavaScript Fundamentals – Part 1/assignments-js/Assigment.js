@@ -10,8 +10,8 @@ let population = 200; //integer value because 10 is a number, and population can
 //look at LECTURE: let, const and var why some code change to comment
 
 //Log their values to the console
-console.log(country); //indonesia
-console.log(continent); //Asia
+//console.log(country); //indonesia
+//console.log(continent); //Asia
 console.log(population); //200 means 200 million population
 // end LECTURE: Values and Variables
 ////////////////////////////////////////////////
@@ -24,9 +24,9 @@ console.log(population); //200 means 200 million population
 let language; //just declaration variable will output undefined
 
 //Log the types of 'isIsland', 'population', 'country' and 'language' to the console
-console.log(typeof isIsland); //boolean value, because isIsland value is (true) that is boolean value
+//console.log(typeof isIsland); //boolean value, because isIsland value is (true) that is boolean value
 console.log(typeof population); //integer value, because population value is (10) that is integer
-console.log(typeof country); //string value, because country value is ('Indonesia') that is string value
+//console.log(typeof country); //string value, because country value is ('Indonesia') that is string value
 console.log(typeof language); //undefined value, because language value haven't been assigned yet
 
 // end of LECTURE: Data Types
@@ -69,15 +69,25 @@ console.log(population); //console the result
 
 //Finland has a population of 6 million. Does your country have more people than Finland?
 const findlandPopulation = 6;
-console.log(findlandPopulation > population); //true because indonesia have 200 million people + 1 million for the increment
+console.log(population > findlandPopulation); //true because indonesia have 200 million people + 1 million for the increment
 
 //The average population of a country is 33 million people. Does your country have less people than the average country?
 const averagePopulation = 33;
 console.log(population < averagePopulation); //false because indonesia have more people than the average population of the country
 
 //Based on the variables you created, create a new variable 'description' which contains a string with this format: 'Portugal is in Europe, and its 11 million people speak portuguese'
-const description = country + ' is in ' + continent + ' and its ' + population + ' million people speak ' + language;
-
+let description = country + ' is in ' + continent + ' and its ' + population + ' million people speak ' + language;
+console.log(description); 
 
 // end of LECTURE: Basic Operators
+////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+//LECTURE: Strings and Template Literals
+
+description = `${country} is in ${continent} and its ${population} million people speak ${language}`
+console.log(description);
+
+// end of LECTURE: Strings and Template Literals
 ////////////////////////////////////////////////
