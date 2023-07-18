@@ -8,21 +8,20 @@ function returns a string with this format: 'Finland has 6 million people and it
 capital city is Helsinki'
 */
 function describeCountry(country, population, capitalCity) {
-    return `${country} has ${population} million people and its capital city is ${capitalCity}`;
+  return `${country} has ${population} million people and its capital city is ${capitalCity}`;
 }
 
 /*
 Call this function 3 times, with input data for 3 different countries. Store the
 returned values in 3 different variables, and log them to the console
-*/ 
-const indonesia = describeCountry('Indonesia', 200, "Jakarta");
-const japan = describeCountry('Japan', 125.7, "Tokyo");
-const switzerland = describeCountry("Switzerland",8.7,'Bern');
+*/
+const indonesia = describeCountry("Indonesia", 200, "Jakarta");
+const japan = describeCountry("Japan", 125.7, "Tokyo");
+const switzerland = describeCountry("Switzerland", 8.7, "Bern");
 
 console.log(indonesia);
 console.log(japan);
 console.log(switzerland);
-
 
 //end of LECTURE: Functions
 ////////////////////////////////////////////////
@@ -38,15 +37,14 @@ represents. For example, China has 1441 million people, so it's about 18.2% of
 the world population
 */
 
-
 /*
 To calculate the percentage, divide the given 'population' value by 7900
 and then multiply by 100
 */
 function percentageOfWorld1(population) {
- const worldPopulation = 7900;
- const percentage = (population / worldPopulation) * 100;
- return percentage
+  const worldPopulation = 7900;
+  const percentage = (population / worldPopulation) * 100;
+  return percentage;
 }
 
 /*
@@ -64,10 +62,10 @@ the same populations)
 */
 
 const percentageOfWorld2 = function (population) {
-    const worldPopulation = 7900;
-    const percentage = (population / worldPopulation) * 100;
-    return percentage;
-}
+  const worldPopulation = 7900;
+  const percentage = (population / worldPopulation) * 100;
+  return percentage;
+};
 
 console.log(percentageOfWorld2(200));
 console.log(percentageOfWorld2(125.7));
@@ -106,8 +104,10 @@ To calculate the percentage, 'describePopulation' call the
 'percentageOfWorld1' you created earlier
 */
 const describePopulation = (country, population) => {
-    return `${country} has ${population} million people, so it's about ${percentageOfWorld1(population).toFixed(1)}% of the world population`;
-}
+  return `${country} has ${population} million people, so it's about ${percentageOfWorld1(
+    population
+  ).toFixed(1)}% of the world population`;
+};
 
 /*
 Call 'describePopulation' with data for 3 countries of your choice
@@ -176,7 +176,9 @@ neighbours.pop();
 If the 'neighbours' array does not include the country ‘Germany’, log to the
 console: 'Probably not a central European country :D'
 */
-!neighbours.includes("Germany") ? console.log('Probably not a central European country :D') : null;
+!neighbours.includes("Germany")
+  ? console.log("Probably not a central European country :D")
+  : null;
 
 /**
  * Change the name of one of your neighbouring countries. To do that, find the
@@ -184,7 +186,7 @@ index of the country in the 'neighbours' array, and then use that index to
 change the array at that index position. For example, you can search for
 'Sweden' in the array, and then replace it with 'Republic of Sweden'
  */
-neighbours[neighbours.indexOf("Indonesia")] = "Republic of Indonesia"; 
+neighbours[neighbours.indexOf("Indonesia")] = "Republic of Indonesia";
 
 console.log(neighbours);
 
@@ -200,12 +202,12 @@ properties 'country', 'capital', 'language', 'population' and
 'neighbours' (an array like we used in previous assignments)
  */
 const myCountry = {
-    country : "Indonesia",
-    capital : "Jakarta",
-    language : "Bahasa Indonesia",
-    population : 200,
-    neighbours : ["Malaysia", "Singapore", "Philippines", "Australia"]
-}
+  country: "Indonesia",
+  capital: "Jakarta",
+  language: "Bahasa Indonesia",
+  population: 200,
+  neighbours: ["Malaysia", "Singapore", "Philippines", "Australia"],
+};
 
 // end of LECTURE: Introduction to Objects
 ////////////////////////////////////////////////
@@ -218,7 +220,9 @@ const myCountry = {
 console: 'Finland has 6 million finnish-speaking people, 3 neighbouring countries
 and a capital called Helsinki.'
  */
-console.log(`${myCountry.country} has ${myCountry.population} million people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`);
+console.log(
+  `${myCountry.country} has ${myCountry.population} million people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`
+);
 
 /**
  * Increase the country's population by two million using dot notation, and then
@@ -239,10 +243,11 @@ myCountry["population"] -= 2;
 will log a string to the console, similar to the string logged in the previous
 assignment, but this time using the 'this' keyword.
  */
-myCountry.describe = function() {
-    console.log(`${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`
-    );
-}
+myCountry.describe = function () {
+  console.log(
+    `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`
+  );
+};
 //Call the 'describe' method
 myCountry.describe();
 
@@ -252,10 +257,9 @@ method will set a new property on the object, called 'isIsland'.
 'isIsland' will be true if there are no neighbouring countries, and false if
 there are. Use the ternary operator to set the property.
  */
-myCountry.checkIsland = function(){
-    this.isIsland = this.neighbours,length > 0 ? false : true;
-}
-
+myCountry.checkIsland = function () {
+  (this.isIsland = this.neighbours), length > 0 ? false : true;
+};
 
 // end of LECTURE: Object Methods
 ////////////////////////////////////////////////
@@ -268,8 +272,8 @@ myCountry.checkIsland = function(){
 Use a for loop to simulate the 50 people voting, by logging a string like this to
 the console (for numbers 1 to 50): 'Voter number 1 is currently voting'
  */
-for(let voter = 1; voter <= 50; voter++) {
-    console.log(`Voter number ${voter} is currently voting`);
+for (let voter = 1; voter <= 50; voter++) {
+  console.log(`Voter number ${voter} is currently voting`);
 }
 
 // end of LECTURE: Iteration: The for Loop
@@ -287,8 +291,8 @@ percentages of the world population for the 4 population values. Use the
 function 'percentageOfWorld1' that you created earlier
  */
 const percentages2 = [];
-for(let population = 0; population < populations2.length; population++){
-    percentages2.push(percentageOfWorld1(populations2[population]).toFixed(1));
+for (let population = 0; population < populations2.length; population++) {
+  percentages2.push(percentageOfWorld1(populations2[population]).toFixed(1));
 }
 
 /**
@@ -311,7 +315,11 @@ console.log(percentages2);
 [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden',
 'Russia']];
  */
-const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']]
+const listOfNeighbours = [
+  ["Canada", "Mexico"],
+  ["Spain"],
+  ["Norway", "Sweden", "Russia"],
+];
 
 /**
  * Log only the neighbouring countries to the console, one by one, not the entire
@@ -321,10 +329,10 @@ arrays. Log a string like 'Neighbour: Canada' for each country
  * You will need a loop inside a loop for this. This is actually a bit tricky, so don't
 worry if it's too difficult for you! But you can still try to figure this out anyway �
  */
-for(let i = 0; i < listOfNeighbours.length; i++){
-    for(let j = 0; j < listOfNeighbours[i].length; j++) {
-        console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
-    }
+for (let i = 0; i < listOfNeighbours.length; i++) {
+  for (let j = 0; j < listOfNeighbours[i].length; j++) {
+    console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+  }
 }
 
 // end of LECTURE: Looping Backwards and Loops in Loops
@@ -341,9 +349,9 @@ const populations3 = [200, 125.7, 8.7, 30];
 const percentages3 = [];
 let population = 0;
 
-while(population < populations3.length) {
-    percentages3.push(percentageOfWorld1(populations3[population]).toFixed(1));
-    population++;
+while (population < populations3.length) {
+  percentages3.push(percentageOfWorld1(populations3[population]).toFixed(1));
+  population++;
 }
 
 console.log(percentages);
@@ -360,5 +368,3 @@ const myOpinion = `I love for looping for now because the .length method help me
 
 // end of LECTURE: The while Loop
 ////////////////////////////////////////////////
-
-
