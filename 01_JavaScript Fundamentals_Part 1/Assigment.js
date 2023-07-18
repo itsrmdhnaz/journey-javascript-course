@@ -181,7 +181,7 @@ is greater than 1
 /*
 Finally, convert 'numNeighbours' to a number, and watch what happens now
 when you input 1
-*/ 
+*/
 //that will output only one border
 
 // end of LECTURE: Equality Operators: == vs. ===
@@ -195,8 +195,8 @@ Let's say Sarah is looking for a new country to live in. She wants to live in a
 country that speaks english, has less than 50 million people and is not an
 island.
  */
-const sarahCountry = 'Singapore';
-const sarahLanguage = 'English';
+const sarahCountry = "Singapore";
+const sarahLanguage = "English";
 const sarahCountryPopulation = 50;
 const sarahIsland = false;
 
@@ -206,11 +206,7 @@ You will need to write a condition that accounts for all of Sarah's criteria. Ta
 your time with this, and check part of the solution if necessary
 */
 
-if (
-  language === 'English' &&
-  population < 50 &&
-  !isIsland 
-) {
+if (language === "English" && population < 50 && !isIsland) {
   console.log(`You should live in ${country} ;)`);
 } else {
   console.log(`${country} does not meet you criteria :(`);
@@ -233,24 +229,24 @@ for all other simply log 'Great language too :D
 */
 
 switch (language) {
-  case 'chinese':
-  case 'mandarin':
-    console.log('MOST number of native speakers!');
+  case "chinese":
+  case "mandarin":
+    console.log("MOST number of native speakers!");
     break;
-  case'spanish':
-    console.log('2nd place in number of native speakers');
+  case "spanish":
+    console.log("2nd place in number of native speakers");
     break;
-  case 'english':
-    console.log('3rd place');
+  case "english":
+    console.log("3rd place");
     break;
-  case 'hindi':
-    console.log('Number 4');
+  case "hindi":
+    console.log("Number 4");
     break;
-  case 'arabic':
-    console.log('5th most spoken language');
+  case "arabic":
+    console.log("5th most spoken language");
     break;
   default:
-    console.log('Great language too :D');
+    console.log("Great language too :D");
 }
 
 // end of LECTURE: The switch Statement
@@ -266,7 +262,9 @@ Otherwise, simply log 'Portugal's population is below average'. Notice how only
 one word changes between these two sentences!
 */
 
-(population > 33) ? console.log(`${country}'s population is above average`) : console.log(`${country}'s population is below average`);
+population > 33
+  ? console.log(`${country}'s population is above average`)
+  : console.log(`${country}'s population is below average`);
 
 /*
 After checking the result, change the population temporarily to 13 and then to
