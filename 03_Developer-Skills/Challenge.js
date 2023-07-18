@@ -1,4 +1,4 @@
-// Remember, we're gonna use strict mode in all scripts now!
+// Remember, we're gonna use strict mode in all scripts now!!!
 "use strict";
 
 const data1 = [17, 21, 23];
