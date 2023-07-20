@@ -1,39 +1,39 @@
 ////////////////////////////////////////////////////////////////////////
 // Challenge #1
 const game = {
-  team1: "Bayern Munich",
-  team2: "Borrussia Dortmund",
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
   players: [
     [
-      "Neuer",
-      "Pavard",
-      "Martinez",
-      "Alaba",
-      "Davies",
-      "Kimmich",
-      "Goretzka",
-      "Coman",
-      "Muller",
-      "Gnarby",
-      "Lewandowski",
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
     ],
     [
-      "Burki",
-      "Schulz",
-      "Hummels",
-      "Akanji",
-      "Hakimi",
-      "Weigl",
-      "Witsel",
-      "Hazard",
-      "Brandt",
-      "Sancho",
-      "Gotze",
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
     ],
   ],
-  score: "4:0",
-  scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
-  date: "Nov 9th, 2037",
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
   odds: {
     team1: 1.33,
     x: 3.25,
@@ -67,7 +67,7 @@ const allPlayers = [...players1, ...players2];
 new array ('players1Final') containing all the original team1 players plus
 'Thiago', 'Coutinho' and 'Perisic'
  */
-const players1Final = [...players1, "Thiago", "Countinho", "Perisic"];
+const players1Final = [...players1, 'Thiago', 'Countinho', 'Perisic'];
 
 /**
  * Based on the game.odds object, create one variable for each odd (called
@@ -85,7 +85,7 @@ const printGoals = (...players) => {
   console.log(`${players.length} goals were scored`);
 };
 
-printGoals("Davies", "Muller", "Lewandowski", "Kimmich");
+printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
 printGoals(...game.scored);
 
 /**
@@ -128,7 +128,7 @@ Get the team names directly from the game object, don't hardcode them
 same property names �
  */
 for (const [team, odd] of Object.entries(game.odds)) {
-  const str = team === "x" ? "draw:" : `victory ${team}:`;
+  const str = team === 'x' ? 'draw:' : `victory ${team}:`;
   console.log(`Odd of ${str} ${odd}`);
 }
 
@@ -157,17 +157,17 @@ console.log(scorers);
 // Challenge #3
 
 const gameEvents = new Map([
-  [17, "⚽ GOAL"],
-  [36, "� Substitution"],
-  [47, "⚽ GOAL"],
-  [61, "� Substitution"],
-  [64, "� Yellow card"],
-  [69, "� Red card"],
-  [70, "� Substitution"],
-  [72, "� Substitution"],
-  [76, "⚽ GOAL"],
-  [80, "⚽ GOAL"],
-  [92, "� Yellow card"],
+  [17, '⚽ GOAL'],
+  [36, '� Substitution'],
+  [47, '⚽ GOAL'],
+  [61, '� Substitution'],
+  [64, '� Yellow card'],
+  [69, '� Red card'],
+  [70, '� Substitution'],
+  [72, '� Substitution'],
+  [76, '⚽ GOAL'],
+  [80, '⚽ GOAL'],
+  [92, '� Yellow card'],
 ]);
 
 /**
@@ -195,7 +195,7 @@ whether it's in the first half or second half (after 45 min) of the game, like t
 [FIRST HALF] 17: ⚽ GOAL
  */
 for (const [min, event] of gameEvents) {
-  const half = min <= 45 ? "FIRST" : "SECOND";
+  const half = min <= 45 ? 'FIRST' : 'SECOND';
   console.log(`[${half} Half] ${min}: ${event}`);
 }
 
@@ -205,8 +205,8 @@ for (const [min, event] of gameEvents) {
 ////////////////////////////////////////////////////////////////////////
 // Challenge #4
 
-document.body.append(document.createElement("textarea"));
-document.body.append(document.createElement("button"));
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
 
 /**
  * Write a program that receives a list of variable names written in underscore_case
@@ -227,17 +227,17 @@ calculateAge       ✅✅✅✅
 delayedDeparture   ✅✅✅✅✅
  */
 
-document.querySelector("button").addEventListener("click", () => {
-  const input = document.querySelector("textarea").value;
-  const str = input.split("\n");
+document.querySelector('button').addEventListener('click', () => {
+  const input = document.querySelector('textarea').value;
+  const str = input.split('\n');
 
   for (const [index, word] of str.entries()) {
-    const [first, second] = word.trim().toLowerCase().split("_");
+    const [first, second] = word.trim().toLowerCase().split('_');
     const result = `${first}${second.replace(
       second[0],
       second[0].toUpperCase()
     )}`;
-    console.log(result.padEnd(20, " ") + `✅`.repeat(index + 1));
+    console.log(result.padEnd(20, ' ') + `✅`.repeat(index + 1));
   }
 });
 
