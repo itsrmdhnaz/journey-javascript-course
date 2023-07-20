@@ -66,7 +66,7 @@ const calcAge = function (birthYear) {
 };
 calcAge(2004);
 
-const calcAgeArrow = (birthYear) => {
+const calcAgeArrow = birthYear => {
   console.log(2023 - birthYear);
   console.log(this);
 };
@@ -98,7 +98,7 @@ f();
 // var firstName = 'Matilda';
 
 const jonas = {
-  firstName: "Jonas",
+  firstName: 'Jonas',
   year: 1991,
   calcAge: function () {
     // console.log(this);
@@ -150,48 +150,48 @@ console.log(age);
 console.log(oldAge);
 
 const me = {
-  name: "Jonas",
+  name: 'Jonas',
   age: 30,
 };
 const friend = me;
 friend.age = 27;
-console.log("Friend:", friend);
-console.log("Me", me);
+console.log('Friend:', friend);
+console.log('Me', me);
 
 ///////////////////////////////////////
 // Primitives vs. Objects in Practice
 
 // Primitive types
-let lastName = "Williams";
+let lastName = 'Williams';
 let oldLastName = lastName;
-lastName = "Davis";
+lastName = 'Davis';
 console.log(lastName, oldLastName);
 
 // Reference types
 const jessica = {
-  firstName: "Jessica",
-  lastName: "Williams",
+  firstName: 'Jessica',
+  lastName: 'Williams',
   age: 27,
 };
 const marriedJessica = jessica;
-marriedJessica.lastName = "Davis";
-console.log("Before marriage:", jessica);
-console.log("After marriage: ", marriedJessica);
+marriedJessica.lastName = 'Davis';
+console.log('Before marriage:', jessica);
+console.log('After marriage: ', marriedJessica);
 // marriedJessica = {};
 
 // Copying objects
 const jessica2 = {
-  firstName: "Jessica",
-  lastName: "Williams",
+  firstName: 'Jessica',
+  lastName: 'Williams',
   age: 27,
-  family: ["Alice", "Bob"],
+  family: ['Alice', 'Bob'],
 };
 
 const jessicaCopy = Object.assign({}, jessica2);
-jessicaCopy.lastName = "Davis";
+jessicaCopy.lastName = 'Davis';
 
-jessicaCopy.family.push("Mary");
-jessicaCopy.family.push("John");
+jessicaCopy.family.push('Mary');
+jessicaCopy.family.push('John');
 
-console.log("Before marriage:", jessica2);
-console.log("After marriage: ", jessicaCopy);
+console.log('Before marriage:', jessica2);
+console.log('After marriage: ', jessicaCopy);
